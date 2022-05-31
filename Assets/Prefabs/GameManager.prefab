@@ -51,9 +51,10 @@ MonoBehaviour:
   currentScene: 0
   live: {fileID: 0}
   death: {fileID: 0}
-  swapDelay: 1.5
+  swapDelay: 0.01
   player: {fileID: 0}
   ghost: {fileID: 0}
+  startPoint: {fileID: 0}
   cameraFollow: {fileID: 0}
   PauseMenu: {fileID: 0}
 --- !u!114 &5713887016940423810
@@ -112,3 +113,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectibles: []
   textCounter: {fileID: 0}
+  CollectSound: {fileID: 8300000, guid: 7278764397e515443aa37d0e9caebe7e, type: 3}

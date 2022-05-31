@@ -9,6 +9,7 @@ public class CollectibleManager : MonoBehaviour
 
     [SerializeField] List<CollectItem> collectibles;
     [SerializeField] TextMeshProUGUI textCounter;
+    [SerializeField] AudioClip CollectSound;
     private int numberOfItemCollected = 0;
 
     // Start is called before the first frame update
@@ -36,12 +37,14 @@ public class CollectibleManager : MonoBehaviour
                 numberOfItemCollected++;
                 item.onCollect.RemoveListener(Collect);
                 item.gameObject.SetActive(false);
+                AudioManager.Instance.PlayOnce(CollectSound, 1);
                 UpdateUIText();
                 break;
 
             case Item.Hearth:
                 item.onCollect.RemoveListener(Collect);
                 item.gameObject.SetActive(false);
+                AudioManager.Instance.PlayOnce(CollectSound, 1);
                 break;
 
             default:

@@ -22,6 +22,7 @@ public class OnCollect : UnityEvent<CollectItem> { }
 public class CollectItem : MonoBehaviour
 {
 
+
     public Item itemType;
 
     public OnCollect onCollect;
@@ -32,6 +33,7 @@ public class CollectItem : MonoBehaviour
         if (other.tag == "Player")
         {
             onCollect.Invoke(this);
+            
         }
     }
 

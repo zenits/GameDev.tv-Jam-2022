@@ -166,6 +166,7 @@ MonoBehaviour:
   moveSpeed: 200
   jumpHeight: 10
   hitForce: 1
+  jumpSound: {fileID: 8300000, guid: 88b0c4523134f974fbc859631278e758, type: 3}
 --- !u!114 &6255800285597330493
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed = 1f;
     [SerializeField] float jumpHeight = 1f;
     [SerializeField] float hitForce = 1f;
-
+    [SerializeField] AudioClip jumpSound;
     private void Awake()
     {
         _input = GameManager.Inputs;
@@ -132,6 +132,7 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("Jump !!!");
 
                     _rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+                    AudioManager.Instance.PlayOnce(jumpSound, 1);
                 }
                 break;
             case InputActionPhase.Performed:
