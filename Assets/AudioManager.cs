@@ -67,14 +67,14 @@ public class AudioManager : MonoBehaviour
         }
         target.volume = 0;
         target.Play();
-        for (float i = 0f; i < 1f; i = i + 0.05f)
+        for (float i = 0f; i <= 1f; i = i + 0.05f)
         {
             source.volume = 1 - i;
             target.volume = i;
             yield return new WaitForSeconds(0.1f);
         }
         source.volume = 0;
-        source.Stop();
+        source.Pause();
         yield return 0;
     }
 }
