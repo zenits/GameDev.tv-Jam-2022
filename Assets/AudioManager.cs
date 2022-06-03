@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
         {
             _Instance = this;
             music1.Play();
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
         }
         else
             Destroy(this.gameObject);
@@ -46,6 +46,7 @@ public class AudioManager : MonoBehaviour
 
     public void SwitchMusic()
     {
+        Debug.Log($"SwitchMusic {_fadeDirection.ToString()}");
         StartCoroutine("MusicFade");
     }
 

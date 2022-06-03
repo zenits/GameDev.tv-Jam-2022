@@ -137,6 +137,7 @@ PlayerSettings:
   bundleVersion: 0.2
   preloadedAssets:
   - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -272,7 +273,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5085d6908de446b45a97e1fb4368b0bd, type: 3}
+      m_Icon: {fileID: 2800000, guid: 5bf945e20db3e184dbd0ac1ebfb8ecb2, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
