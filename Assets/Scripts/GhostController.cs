@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class GhostController : MonoBehaviour
@@ -9,6 +10,7 @@ public class GhostController : MonoBehaviour
     private InputActions _input;
     private Vector2 _moveDirection;
     private bool isJumping = false;
+    private bool isInteracting = false;
     private bool groundedPlayer;
     private bool isDead = false;
     private bool isHit = false;
@@ -19,6 +21,7 @@ public class GhostController : MonoBehaviour
     [SerializeField] float jumpHeight = 1f;
     [SerializeField] float hitForce = 1f;
 
+    public UnityEvent onInteract;
 
 
     void Start()
@@ -49,7 +52,8 @@ public class GhostController : MonoBehaviour
         else if (!isHit)
         {
             // move in horizontal directions
-            _rb.velocity = new Vector2(_moveDirection.x * Time.fixedDeltaTime * moveSpeed, _rb.velocity.y);
+            _rb.velocity = new Vector2(_moveDirection.x * Time.fixedDeltaTime * moveSpeed,
+                                        _moveDirection.y > 0 ? _moveDirection.y * Time.fixedDeltaTime * moveSpeed / 2 : _rb.velocity.y);
 
             // rotate sprite in move direction
             if (_moveDirection.x > 0)
@@ -65,14 +69,15 @@ public class GhostController : MonoBehaviour
         }
     }
 
+
     void OnMove(InputAction.CallbackContext context)
     {
         switch (context.phase)
         {
             case InputActionPhase.Started:
-                _moveDirection = context.ReadValue<Vector2>().normalized;
                 break;
             case InputActionPhase.Performed:
+                _moveDirection = context.ReadValue<Vector2>().normalized;
                 break;
             case InputActionPhase.Canceled:
                 _moveDirection = Vector2.zero;
@@ -88,10 +93,16 @@ public class GhostController : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Started:
+                Debug.Log("Playercontroller.Interact");
+                isInteracting = true;
+                onInteract.Invoke();
                 break;
+
             case InputActionPhase.Performed:
                 break;
+
             case InputActionPhase.Canceled:
+                isInteracting = false;
                 break;
             default:
                 break;
@@ -138,7 +149,7 @@ public class GhostController : MonoBehaviour
 
 
     public void OnHitEnd(int a)
-    {        
+    {
         Debug.Log("OnHitEnd");
         isHit = false;
     }

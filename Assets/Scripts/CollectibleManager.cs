@@ -35,21 +35,32 @@ public class CollectibleManager : MonoBehaviour
         {
             case Item.GemBlue:
                 numberOfItemCollected++;
-                item.onCollect.RemoveListener(Collect);
-                item.gameObject.SetActive(false);
-                AudioManager.Instance.PlayOnce(CollectSound, 1);
                 UpdateUIText();
+
                 break;
 
             case Item.Hearth:
-                item.onCollect.RemoveListener(Collect);
-                item.gameObject.SetActive(false);
-                AudioManager.Instance.PlayOnce(CollectSound, 1);
+
                 break;
 
             default:
                 break;
         }
+        item.gameObject.SetActive(false);
+        AudioManager.Instance.PlayOnce(CollectSound, 1);
+        if (item.Respwanable)
+            StartCoroutine("RespawnItem", item);
+        else
+            item.onCollect.RemoveListener(Collect);
+    }
+
+    private IEnumerator RespawnItem(object value)
+    {
+        Debug.Log("RespawnItem");
+        CollectItem item = (CollectItem)value;
+        yield return new WaitForSeconds(item.RespwanDelayInSeconds);
+        item.gameObject.SetActive(true);
+        yield return 0;
     }
 
     private void UpdateUIText()

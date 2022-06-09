@@ -170,6 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -16492,6 +16494,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -16954,6 +16958,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -17753,6 +17759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -18518,6 +18526,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -19832,6 +19842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -20322,6 +20334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -20483,6 +20497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -20672,6 +20688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -39830,6 +39848,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -40182,6 +40202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -40856,6 +40878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -41304,6 +41328,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 301818683}
     m_Modifications:
     - target: {fileID: 8679278245484585505, guid: 769b580db51eadd4098e7f38b012ba4e, type: 3}
+      propertyPath: Respwanable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679278245484585505, guid: 769b580db51eadd4098e7f38b012ba4e, type: 3}
+      propertyPath: RespwanDelayInSeconds
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679278245484585505, guid: 769b580db51eadd4098e7f38b012ba4e, type: 3}
       propertyPath: onCollect.m_PersistentCalls.m_Calls.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -41564,6 +41596,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -41989,6 +42023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:
@@ -42491,6 +42527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c6cceabb6d1048918975ab1c51259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Respwanable: 0
+  RespwanDelayInSeconds: 2
   itemType: 0
   onCollect:
     m_PersistentCalls:

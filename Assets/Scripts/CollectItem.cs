@@ -23,6 +23,8 @@ public class CollectItem : MonoBehaviour
 {
 
 
+    public bool Respwanable = false;
+    public float RespwanDelayInSeconds = 2f;
     public Item itemType;
 
     public OnCollect onCollect;
